@@ -26,7 +26,7 @@ class FirstDemoTests: XCTestCase {
 
   func test_comparingDictionariesWithCustomAssertFunction() {
     let dict1 = ["id": "2", "name": "foo"]
-    let dict2 = ["id": "2", "name": "fo"]
+    let dict2 = ["id": "2", "name": "foo"]
 
     DDHAssertEqual(dict1, dict2)
   }
