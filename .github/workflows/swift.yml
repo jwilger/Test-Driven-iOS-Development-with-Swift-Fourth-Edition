@@ -10,13 +10,13 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  chapter-01:
 
     runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: swift build -v
+      run: xcodebuild -scheme FirstDemo -sdk iphonesimulator -destination name=iphone-14-pro-max build
     - name: Run tests
-      run: swift test -v
+      run: xcodebuild -scheme FirstDemo -sdk iphonesimulator -destination name=iphone-14-pro-max test
